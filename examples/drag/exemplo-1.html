@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sysborg</title>
+</head>
+
+<body>
+    <div style="border: 1px dashed #000; width: 300px; height: 300px;" id="drag-object">
+
+    </div>
+
+    <script type="text/javascript" src="../../dist/sysborg-drag.min.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', (event) => {
+            window.sysborg_drag = new sysborg_drag(document.getElementById('drag-object'), {
+                'fade': true,
+                'cursor-position': ['center', 'middle'],
+                'drag-trigger': null,
+                'style': {'cursor': 'move'}
+            });
+        });
+
+        window.onerror=function(err, file, line){
+            alert('Error: '+ err + '\nFile: '+ file + '\nLinha: '+ line);
+        }
+    </script>
+</body>
+</html>
